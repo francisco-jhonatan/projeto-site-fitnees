@@ -190,7 +190,7 @@ home-img img{
     font-size: 6.5rem;
 }
 
-.conteúdo-de-servicos{
+.cards-conteudo-de-servicos{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     align-items: center;
@@ -198,7 +198,7 @@ home-img img{
     margin-top: 4.1rem;
 }
 
-.card{
+.cards{
     background: var(--bg-color);
     border-radius: 27px;
     border: 1px solid transparent;
@@ -207,29 +207,52 @@ home-img img{
     transition: all 0.5s ease;
 }
 
-.card img{
+.cards img{
     height: auto;
     width: 100%;
     border-radius: 27px;
     margin-bottom: 1.4rem;
 }
 
-.card h4{
+.cards h2{
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 10px;
     line-height: 1.4;
+} 
+
+.cards p{
+    font-size: 22rem;
+    font-weight: 600rem;
+    line-height: 1.4rem;
 }
 
-.card p{
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-.card:hover{
+.cards:hover{
     border: 1px solid var(--main-color);
     transform: translateY(-5px) scale(1.04);
     cursor: pointer;
 }
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
+
+#collapseWidthExample2 {
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
+
+  &.collapse-horizontal {
+    width: 0;
+    height: auto;
+    @include transition($transition-collapse-width);
+  }
+}
+.footer{
+    
+    width: 100%;
+    background-color: #ffffff;
+}
+
 
