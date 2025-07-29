@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 // GET todos os usuários
-router.get('/users:', (req, res) => {
+router.get('/users', (req, res) => {
   res.send('List of users');
 });
 
 // GET usuário por id
-router.get('/users:id', (req, res) => {
+router.get('/users/:id', (req, res) => {
   res.send(`Usuário com ID ${req.params.id}`);
 });
 
