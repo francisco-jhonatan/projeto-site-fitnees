@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,31 +10,31 @@
     font-family: -apple-system, sans-serif;
 }
 
-:root{
+:root {
     --bg-color: #000000;
     --snd-bg-color: #111;
     --text-color: #fff;
     --main-color: #0004ff;
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-body{
+body {
     background: var(--bg-color);
     color: var(--text-color);
 }
 
-section{
+section {
     min-height: 100vh;
     padding: 10rem 8% 2rem;
 }
 
 /* Código da seção do cabeçalho*/
 
-header{
+header {
     position: fixed;
     width: 100%;
     top: 0;
@@ -45,11 +45,11 @@ header{
     align-items: center;
     padding: 2rem 9%;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur (10px);
+    backdrop-filter: blur(10px);
     transition: all 0.5s ease;
 }
 
-.logo{
+.logo {
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
@@ -57,19 +57,19 @@ header{
     transition: 0.3s ease-in-out;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-span{
+span {
     color: var(--main-color);
 }
 
-.navbar{
+.navbar {
     display: flex;
 }
 
-.navbar a{
+.navbar a {
     font-size: 1.8rem;
     font-weight: 500;
     color: var(--text-color);
@@ -84,7 +84,7 @@ span{
     border-bottom: 3px solid var(--main-color);
 }
 
-.nav-btn{
+.nav-btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: transparent;
@@ -96,52 +96,45 @@ span{
     transition: all 0.5s ease;
 }
 
-.nav-btn:hover{
+.nav-btn:hover {
     background: var(--main-color);
     color: var(--text-color);
     box-shadow: 0 0 18px var(--main-color);
 }
 
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--main-color);
-    cursor: pointer;
-    display: none;
-}
-
 /*Código da seção inicial*/
 
-.home{
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 5rem;
     font-weight: 700;
 }
 
-.home-content span{
+.home-content span {
     font-size: 4rem;
     font-weight: 550;
 }
 
-span{
+span {
     color: var(--main-color);
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
-home-img img{
+.home-img img {
     width: 45vw;
 }
 
-.home-img::before{
+.home-img::before {
     content: 'FITNESS';
     position: absolute;
     top: 10%;
@@ -155,13 +148,13 @@ home-img img{
     z-index: -1;
 }
 
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main-color);
@@ -174,23 +167,23 @@ home-img img{
     transition: 0.5s ease;
 }
 
-.btn:hover{
+.btn:hover {
     color: var(--text-color);
     box-shadow: 0 0 1.6rem var(--main-color);
 }
 
 /* código de seleção de serviços */
 
-.servicos{
+.servicos {
     background: var(--snd-bg-color);
 }
 
-.cabecalho{
+.cabecalho {
     text-align: center;
     font-size: 6.5rem;
 }
 
-.cards-conteudo-de-servicos{
+.cards-conteudo-de-servicos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     align-items: center;
@@ -198,61 +191,50 @@ home-img img{
     margin-top: 4.1rem;
 }
 
-.cards{
-    background: var(--bg-color);
+.card {
+    /* background: var(--bg-color); */
     border-radius: 27px;
     border: 1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
+    /* box-shadow: 0 0 5px var(--main-color); */
     padding: 20px;
     transition: all 0.5s ease;
 }
 
-.cards img{
+.cards img {
     height: auto;
     width: 100%;
     border-radius: 27px;
     margin-bottom: 1.4rem;
 }
 
-.cards h2{
+.cards h2 {
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 10px;
     line-height: 1.4;
-} 
-
-.cards p{
-    font-size: 22rem;
-    font-weight: 600rem;
-    line-height: 1.4rem;
 }
 
-.cards:hover{
+.cards p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.cards:hover {
     border: 1px solid var(--main-color);
     transform: translateY(-5px) scale(1.04);
     cursor: pointer;
 }
-.collapse {
-  &:not(.show) {
-    display: none;
-  }
-}
 
-#collapseWidthExample2 {
-  height: 0;
-  overflow: hidden;
-  @include transition($transition-collapse);
 
-  &.collapse-horizontal {
-    width: 0;
+.collapse.collapse-horizontal {
     height: auto;
-    @include transition($transition-collapse-width);
-  }
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
 }
-.footer{
-    
-    width: 100%;
-    background-color: #ffffff;
+.collapse.collapse-horizontal.show {
+    width: 300px;
 }
 
 
