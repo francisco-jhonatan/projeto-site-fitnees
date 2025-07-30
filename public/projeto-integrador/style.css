@@ -12,7 +12,7 @@
 
 :root {
     --bg-color: #000000;
-    --snd-bg-color: #111;
+    --snd-bg-color: #000000;
     --text-color: #fff;
     --main-color: #00e1ff;
 }
@@ -240,5 +240,22 @@ span {
 .collapse.collapse-horizontal.show {
     width: 300px;
 }
+.footer{
+    height: 200px;
+    width: 100%;
+    background-color: #00e1ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
 
+}
+
+.card-title{
+    
+    width: 50mm;
+    text-decoration-color: #00e1ff;
+    
+}
 
