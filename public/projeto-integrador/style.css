@@ -86,7 +86,7 @@ span {
     border-bottom: 3px solid var(--main-color);
 }
 
-.nav-btn {
+/* .nav-btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: transparent;
@@ -96,7 +96,7 @@ span {
     font-size: 1.6rem;
     font-weight: 600;
     transition: all 0.5s ease;
-}
+} */
 
 .nav-btn:hover {
     background: var(--main-color);
@@ -182,7 +182,7 @@ span {
 
 .cabecalho {
     text-align: center;
-    font-size: 6.5rem;
+    font-size: 4.5rem;
 }
 
 .cards-conteudo-de-servicos {
@@ -210,16 +210,18 @@ span {
 }
 
 .cards h2 {
-    font-size: 25px;
+    color: white;
+    /* font-size: 25px;
     font-weight: 700;
     margin-bottom: 10px;
-    line-height: 1.4;
+    line-height: 1.4; */
 }
 
 .cards p {
-    font-size: 2rem;
+    color: white;
+    /* font-size: 2rem;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.4; */
 }
 
 .cards:hover {
