@@ -193,7 +193,7 @@ span {
     align-items: center;
 }
 
-/* #region card */
+/* #region CARD */
 
 .card-holder{
     width: 340px;
@@ -232,6 +232,8 @@ span {
     text-shadow: 0px 0px 20px rgba(0,0,0,1);
 }
 
+/* #endregion */
+
 .cabecalho{
     padding: 0 3rem;
 }
@@ -255,6 +257,3 @@ span {
     font-size: 2.6rem;
     margin: 2rem 0 2rem;
 }
-
-
-#endregion */
