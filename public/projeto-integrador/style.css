@@ -20,16 +20,19 @@
 }
 
 html {
+    width: 100%;
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
 body {
+    width: 100%;
     background: var(--bg-color);
     color: var(--text-color);
 }
 
 section {
+    width: 100%!important;
     min-height: 100vh;
     padding: 10rem 8% 2rem;
 }
@@ -166,6 +169,11 @@ span {
     background: var(--snd-bg-color);
 }
 
+.servicos h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .cabecalho {
     text-align: center;
     font-size: 4.5rem;
@@ -194,6 +202,11 @@ span {
 }
 
 /* #region CARD */
+#card-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
 .card-holder{
     width: 340px;
