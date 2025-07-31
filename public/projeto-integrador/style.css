@@ -259,3 +259,28 @@ span {
     
 }
 
+.cabecalho{
+    padding: 0 3rem;
+}
+
+.cabecalho h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.texto  {
+    height: 600px;
+    width: 100%;
+    /* background: #fa0808; */
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 50px;  
+}
+
+.sobre p{
+    font-size: 2.6rem;
+    margin: 2rem 0 2rem;
+}
+
+
