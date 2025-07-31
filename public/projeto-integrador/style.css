@@ -242,7 +242,7 @@ span {
     width: 300px;
 }
 .footer{
-    height: 200px;
+    height: 300px;
     width: 100%;
     background-color: #00e1ff;
     display: flex;
@@ -258,6 +258,17 @@ span {
     width: 50mm;
     text-decoration-color: #00e1ff;
     
+}
+.footer a{ 
+    border-radius:100%;
+    transform: scale(1.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer img:hover{
+    transform: scale(1.1);
 }
 .box-artigos {
 
