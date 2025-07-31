@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,10 +11,12 @@
 }
 
 :root {
-    --bg-color: #000000;
-    --snd-bg-color: #000000;
+    --bg-color: #232323;
+    --snd-bg-color: #191919;
     --text-color: #fff;
     --main-color: #00e1ff;
+    --main-color-50: rgba(0, 225, 255, 0.5);
+    --animation-response: 0.3s;
 }
 
 html {
@@ -186,52 +187,6 @@ span {
     font-size: 4.5rem;
 }
 
-.cards-conteudo-de-servicos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    align-items: center;
-    gap: 2.3rem;
-    margin-top: 4.1rem;
-}
-
-.card {
-    background: var(--bg-color);
-    border-radius: 27px;
-    border: 1px solid transparent;
-    box-shadow: 0 0 5px var(--main-color);
-    padding: 20px;
-    transition: all 0.5s ease;
-}
-
-.cards img {
-    height: auto;
-    width: 100%;
-    border-radius: 27px;
-    margin-bottom: 1.4rem;
-}
-
-.cards h2 {
-    color: white;
-    /* font-size: 25px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1.4; */
-}
-
-.cards p {
-    color: white;
-    /* font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.4; */
-}
-
-.cards:hover {
-    border: 1px solid var(--main-color);
-    transform: translateY(-5px) scale(1.04);
-    cursor: pointer;
-}
-
-
 .collapse.collapse-horizontal {
     height: auto;
     width: 0;
@@ -253,172 +208,43 @@ span {
 
 }
 
-.card-title{
-    
-    width: 50mm;
-    text-decoration-color: #00e1ff;
-    
-}
-.box-artigos {
+/* #region card */
 
-  width: 100%;
-  height: auto;
-  float: left;
-
-}
-
-.artigo-1 {
-  
-  display: inline-block;
-  width:100%;
-  height: 100%;
-  float: left;
-  background: #363636;
-  text-align: center;
-  transition: all 0.25s;
-  padding-bottom: 30px;
-  border-radius:10px;
-  margin-bottom: 20px;
-
+.card-holder{
+    width: 340px;
+    height: 340px;
+    display: flex;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: transform var(--animation-response), 
+                border-radius var(--animation-response);
 }
 
-.artigo-2 {
-  
-  display: inline-block;
-  width:100%;
-  height: 100%;
-  float: left;
-  background: #363636;
-  text-align: center;
-  transition: all 0.25s;
-  padding-bottom: 30px;
-  border-radius:10px;
-  margin-bottom: 20px;
-
-
+.card-holder:hover{
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    transform: scale(1.05);
+    border-radius: 0px;
 }
 
-.artigo-3 {
 
-  display: inline-block;
-  width:100%;
-  height: 100%;
-  float: left;
-  background: #363636;
-  text-align: center;
-  transition: all 0.25s;
-  padding-bottom: 30px;
-  border-radius:10px;
-  margin-bottom: 20px;
-
-
+.card-model{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
 }
 
-.artigo-1:hover               { background: #007cff; }
-.artigo-1:hover .circlepic    { background: #5c5c5c; }
-.artigo-1:hover .circleborder { background: #333333; }
-
-.box-artigos h3 {
-  
-  width: 100%;
-  font-size: 25px;
-  font-weight: bold;
-  margin: 180px 0 auto;
-  text-align: center;
-  color: #fff;
-
+.card-model h1{
+    width: 100%;
+    padding: 5px;
+    background-color: var(--main-color-50);
+    text-shadow: 0px 0px 20px rgba(0,0,0,1);
 }
 
-.box-artigos p {
-
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 16px;
-  color: #fff;
-  padding: 0 15px;
-  line-height: 30px;
-
-}
-
-.box-artigos .verMais { 
-
-  color: #202020;
-  text-decoration: none;
-  background-color: #007cff;
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 6px;
-  margin: 15px 0 auto;
-
-}
-
-.box-artigos .artigoIcon {
-  
-  width: 90px;
-  height: 90px;
-  display: grid;
-  text-align: center;
-  font-size: 42px;
-  color: #fff;
-  background: transparent;
-  border-radius: 50px;
-  align-content: center;
-
-}
-
-.artigo-1:hover h3       { color: #2b2b2b; }
-.artigo-1:hover .verMais { color: #ffffff; background-color: #2b2b2b; }
-
-.artigo-2:hover h3   { color: #2b2b2b; }
-.artigo-2:hover .verMais { color: #ffffff; background-color: #2b2b2b; }
-
-.artigo-3:hover h3 { color: #2b2b2b; }
-.artigo-3:hover .verMais { color: #ffffff; background-color: #2b2b2b; }
-
-.artigo-3:hover articleIcon { color: #2b2b2b; }
-
-.artigo-1:hover .artigoIcon, .artigo-2:hover .artigoIcon, .artigo-3:hover .artigoIcon {
-  transition: all 0.65s;
-  transform: rotateY(360deg);
-}
-
-.artigo-1:hover { background: #007cff; }
-.artigo-1:hover .circleborder{ background: #2b2b2b; }
-
-.artigo-2:hover { background: #007cff; }
-.artigo-2:hover .circleborder{ background: #2b2b2b; }
-
-.artigo-3:hover { background: #007cff; }
-.artigo-3:hover .circleborder{ background: #2b2b2b; }
-
-.circleborder {
-
-  width: 90px;
-  height: 90px;
-  background: transparent;
-  margin: -150px auto;
-  border-radius: 50%;
-
-}
-
-.circlepic {
-
-  margin: 50px auto;
-  width: 110px;
-  height: 110px;
-  background: #5c5c5c;
-  border-radius: 50%;
-
-}
-
-/*768PX BREAKPOINT*/
-/*768 dividido por 16 = 48em*/
-@media (min-width:48em){
-
-  .artigo-1 { width:32%; margin-bottom:0; margin-right:2%; }
-  .artigo-2 { width:32%; margin-bottom:0; margin-right:2%; }
-  .artigo-3 { width:32%; margin-bottom:0; }
-
-}
-
+/* #endregion */
