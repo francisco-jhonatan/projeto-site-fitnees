@@ -257,3 +257,40 @@ span {
     font-size: 2.6rem;
     margin: 2rem 0 2rem;
 }
+
+#modal {
+    font-size: 2rem;
+    position: fixed;
+    top: 150px;
+    left: 150px;
+    right: 150px;
+    bottom: 150px;
+    border: 1px solid var(--main-color);
+    display: none;
+
+
+}
+.modal-container {
+    height: 100%;
+    width: 100%;
+    background-color:rgb(30, 156, 179);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.btn-close-1{
+    cursor: pointer;
+    position: absolute;
+    bottom: 590px;
+    right: 10px;
+    color: blue;
+    font-size: 45px;
+}
+
+
+.imagem-lado{
+    display: flex;
+}
+
