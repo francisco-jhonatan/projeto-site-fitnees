@@ -84,6 +84,9 @@ for (let i = 0; i < personals.length; i++) {
   cardContainer.appendChild(cardFrag)
 }
 
+
+
+
 function DrawModal(personal) {
-  alert("Exibir modal para o personal: " + personal.nome)
+  document.getElementById('modal').style.display='block'
 }
