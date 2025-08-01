@@ -282,3 +282,29 @@ span {
     font-size: 2.6rem;
     margin: 2rem 0 2rem;
 }
+
+.card-holder4 {
+    width: 340px;
+    height: 340px;
+    display: flex;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px var(--main-color);
+    transition: transform var(--main-color), border-radius var(--animation-response);
+}
+.card-holder4 h1 {
+    padding: 50px;
+    border-radius: 30px;
+    background-position: 10%;
+}
+.card-holder4 h2 {
+    padding: 50px;
+    border-radius: 30px;
+    background-position: 10%;
+    
+}
+.card-holder4 h3 {
+    padding: 50px;
+    border-radius: 30px;
+    background-position: 10%;
+}
