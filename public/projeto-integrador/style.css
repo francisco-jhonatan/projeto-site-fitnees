@@ -49,7 +49,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 9%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(0, 0, 0);
     backdrop-filter: blur(10px);
     transition: all 0.5s ease;
 }
@@ -83,12 +83,14 @@ span {
     transition: all 0.5s ease;
     border-bottom: 3px solid transparent;
     text-decoration: none;
+    
 }
 
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
+  
 }
 
 .nav-btn {
@@ -101,6 +103,7 @@ span {
     font-size: 1.6rem;
     font-weight: 600;
     transition: all 0.5s ease;
+    
 }   
 
 /* .nav-btn:hover {
@@ -167,6 +170,7 @@ span {
 
 .servicos {
     background: var(--snd-bg-color);
+    background-color: rgb(35, 35, 35);
 }
 
 .servicos h2{
@@ -227,8 +231,8 @@ span {
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 0 5px var(--main-color);
-    transition: transform var(--animation-response),
-        border-radius var(--animation-response);
+    transition: transform var(--animation-response);
+    border-radius: var(--animation-response);
 }
 
 .card-holder:hover {
@@ -261,11 +265,17 @@ span {
 
 .cabecalho {
     padding: 0 3rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .cabecalho h2 {
     text-align: left;
     line-height: 1.2;
+    display: flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .texto {
@@ -277,8 +287,23 @@ span {
     align-items: center;
     padding: 50px;
 }
-
+.sobre{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 .sobre p {
     font-size: 2.6rem;
     margin: 2rem 0 2rem;
+    font-family:'Times New Roman';
 }
+.footer img:hover{
+    transform: scale(1.1);
+}
+.footer img:hover{
+    transform: scale(1.1);}
+.footer{
+    background-color: black;
+}
+ 
+
