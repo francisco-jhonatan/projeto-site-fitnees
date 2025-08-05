@@ -4,9 +4,9 @@ const PORT = 3000
 
 const usersRouter = require('./routes/users')
 
-app.use('GET', '/users',usersRouter)
-app.use('GET', '/users/:id', usersRouter)
-app.use('GET', '/new', usersRouter)
+app.use( '/users',usersRouter)
+app.use( '/users/:id', usersRouter)
+app.use( '/new', usersRouter)
 
 // Rota básica
 app.get('/', (req, res) => {
