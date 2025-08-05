@@ -230,8 +230,8 @@ span {
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 0 5px var(--main-color);
-    transition: transform var(--animation-response);
-    border-radius: var(--animation-response);
+    transition: transform var(--animation-response),
+                border-radius var(--animation-response);
 }
 
 .card-holder:hover {
@@ -331,7 +331,7 @@ span {
 .btn-close-1{
     cursor: pointer;
     position: absolute;
-    bottom: 590px;
+    top: 10px;
     right: 10px;
     color: blue;
     font-size: 45px;
