@@ -17,7 +17,9 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  res.send('Create a new user');
+  console.log(req.body)
+  res.send(`Usuário ${req.body.username} 
+    cadastrado com senha ${req.body.password}`);
 });
 
 router.put('/', (req, res)=>{

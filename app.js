@@ -3,6 +3,8 @@ const userRoutes = require('./routes/users'); // Importa a rota
 const app = express();
 const port = 3000;
 
+app.use(express.json())
+
 // Monta a rota '/users' 
 app.use('/users', userRoutes);
 
