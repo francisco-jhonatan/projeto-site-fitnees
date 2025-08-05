@@ -1,19 +1,31 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router();  
 
-// GET todos os usuários
-router.get('/users', (req, res) => {
+// Middleware para esta rota
+router.use((req, res, next) => {
+  console.log('Time:', Date.now());
+  next();
+});
+
+// Define as rotas. GET, POST, PUT e DELETE
+router.get('/', (req, res) => {
   res.send('List of users');
 });
 
-// GET usuário por id
-router.get('/users/:id', (req, res) => {
-  res.send(`Usuário com ID ${req.params.id}`);
+router.get('/:id', (req, res) => {
+  res.send(`Details for user with ID: ${req.params.id}`);
 });
 
-// POST novo usuário
-router.post('/new', (req, res) => {
-  res.send('Cadastrar um usuário');
+router.post('/', (req, res) => {
+  res.send('Create a new user');
 });
+
+router.put('/', (req, res)=>{
+  res.send('Put method');
+})
+
+router.delete('/:id', (req, res)=>{
+  res.send('Delete method');
+})
 
 module.exports = router;

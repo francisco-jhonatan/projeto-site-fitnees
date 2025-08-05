@@ -1,19 +1,17 @@
 const express = require('express');
+const userRoutes = require('./routes/users'); // Importa a rota
 const app = express();
-const PORT = 3000
+const port = 3000;
 
-const usersRouter = require('./routes/users')
+// Monta a rota '/users' 
+app.use('/users', userRoutes);
 
-app.use( '/users',usersRouter)
-app.use( '/users/:id', usersRouter)
-app.use( '/new', usersRouter)
-
-// Rota básica
+// Rota do home
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Welcome to the homepage!');
 });
 
-// Inicia o server server
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// Server rodando
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
 });
