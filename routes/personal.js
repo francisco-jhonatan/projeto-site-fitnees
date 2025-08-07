@@ -1,19 +1,17 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-
 router.use((req, res, next) => {
-  console.log('Time:', Date.now());
+  console.log("Time:", Date.now());
   next();
 });
 
-router.get('/', (req, res) => {
-  res.send(' Lista de personal');
+router.get("/", (req, res) => {
+  res.send(" Lista de personal");
 });
 
-router.get('/:id', (req, res) => {
+router.get("/:id", (req, res) => {
   res.send(`Nome, Formação, Contato ID: ${req.params.id}`);
 });
-
 
 module.exports = router;
