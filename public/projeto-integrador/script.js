@@ -1,6 +1,20 @@
+//const { json } = require("body-parser");
 
 
 const cardContainer = document.getElementById('card-container')
+
+let url = 'http://localhost:3000/personals/'
+
+fetch(url, { cache: "no-store" })
+  .then(response => {
+
+    var lista = response.headers.get('X-RateLimit-Lista');
+    console.log("Lista remaining: " + lista);
+
+    response.json().then(json => {
+      console.log(json);
+    });
+});                                                           
 
 var personals = [
   {
