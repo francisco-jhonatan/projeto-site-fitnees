@@ -1,12 +1,12 @@
 const express = require('express');
-const userRoutes = require('./routes/users'); // Importa a rota
+const personalsRoutes = require('./routes/personals'); // Importa a rota
 const app = express();
 const port = 3000;
 
 app.use(express.json())
 
 // Monta a rota '/users' 
-app.use('/users', userRoutes);
+app.use('/personals', personalsRoutes);
 
 // Rota do home
 app.get('/', (req, res) => {
