@@ -2,6 +2,9 @@ const express = require('express');
 const personalsRoutes = require('./routes/personals'); // Importa a rota
 const app = express();
 const port = 3000;
+const cors = require('cors')// acess-control-allow-origin
+
+app.use(cors())
 
 app.use(express.json())
 
