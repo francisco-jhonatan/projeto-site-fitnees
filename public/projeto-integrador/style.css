@@ -32,7 +32,7 @@ body {
 }
 
 section {
-    width: 100%!important;  
+    width: 100% !important;
     min-height: 100vh;
     padding: 10rem 8% 2rem;
 }
@@ -83,14 +83,14 @@ span {
     transition: all 0.5s ease;
     border-bottom: 3px solid transparent;
     text-decoration: none;
-    
+
 }
 
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
-  
+
 }
 
 /* .nav-btn {
@@ -140,7 +140,7 @@ span {
 }
 
 /*imagem da logo home*/
-.home-img img { 
+.home-img img {
     width: 32vw;
 }
 
@@ -172,7 +172,7 @@ span {
     background-color: rgb(35, 35, 35);
 }
 
-.servicos h2{
+.servicos h2 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -217,8 +217,8 @@ span {
 }
 
 /* #region CARD */
-#card-container{
-    display:flex;
+#card-container {
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -231,7 +231,7 @@ span {
     border-radius: 30px;
     box-shadow: 0 0 5px var(--main-color);
     transition: transform var(--animation-response),
-                border-radius var(--animation-response);
+        border-radius var(--animation-response);
 }
 
 .card-holder:hover {
@@ -265,16 +265,16 @@ span {
 .cabecalho {
     padding: 0 3rem;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 }
 
 .cabecalho h2 {
     text-align: left;
     line-height: 1.2;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 }
 
 .texto {
@@ -286,22 +286,28 @@ span {
     align-items: center;
     padding: 50px;
 }
-.sobre{
+
+.sobre {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 .sobre p {
     font-size: 2.6rem;
     margin: 2rem 0 2rem;
-    font-family:'Times New Roman';
+    font-family: 'Times New Roman';
 }
-.footer img:hover{
+
+.footer img:hover {
     transform: scale(1.1);
 }
-.footer img:hover{
-    transform: scale(1.1);}
-.footer{
+
+.footer img:hover {
+    transform: scale(1.1);
+}
+
+.footer {
     background-color: black;
 }
 
@@ -318,29 +324,30 @@ span {
 
 
 }
+
 .modal-container {
     height: 100%;
     width: 100%;
-    background-color:rgb(30, 156, 179);
+    background-color: rgb(30, 156, 179);
     display: flex;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;
 }
 
-.btn-close-1{
+/* .btn-close-1 {
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 10px;
     color: blue;
     font-size: 45px;
-}
+} */
 
 
-.imagem-lado{
+/* .imagem-lado{
     display: flex;
-}
+} */
 
 
 #modal {
@@ -356,38 +363,39 @@ span {
     background-color: rgba(0, 0, 0, 0.4);
 
 }
+
 .modal-container {
     position: relative;
-  background-color: var(--main-color);
-  margin: 10% auto;
-  padding: 30px 40px;
-  width: 75%;
-  height: 700px;
-  border-radius: 10px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: var(--main-color);
+    margin: 10% auto;
+    padding: 30px 40px;
+    width: 75%;
+    height: 700px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.btn-close-1 {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  transition: color 0.3s ease;
+/* .btn-close-1 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.btn-close-1:hover{
+.btn-close-1:hover {
     color: red;
 }
 
 
-.imagem-lado{
+.imagem-lado {
     display: flex;
 }
 
@@ -401,22 +409,25 @@ span {
     box-shadow: 0 0 10px var(--main-color);
     transition: transform var(--main-color), border-radius var(--animation-response);
 }
+
 .card-holder4 h1 {
     padding: 50px;
     border-radius: 30px;
     background-position: 10%;
 }
+
 .card-holder4 h2 {
     padding: 50px;
     border-radius: 30px;
     background-position: 10%;
-    
+
 }
+
 .card-holder4 h3 {
     padding: 50px;
     border-radius: 30px;
     background-position: 10%;
-}
+} */
 
 
 
@@ -426,7 +437,7 @@ span {
     grid-template-rows: repeat(10, 1fr);
     gap: 8px;
 }
-    
+
 #foto {
     background-image: url(../images/imagem1.png);
     grid-column: span 2 / span 2;
@@ -471,21 +482,21 @@ span {
     grid-row-start: 5;
 }
 
-#contato {
+#email {
     grid-column: span 3 / span 3;
     grid-column-start: 8;
     grid-row-start: 6;
 }
 
-#instagram {
+#contato {
     grid-column: span 3 / span 3;
     grid-column-start: 5;
     grid-row-start: 8;
 }
 
-#email {
+#instagram {
     grid-column: span 3 / span 3;
     grid-column-start: 8;
     grid-row-start: 8;
 }
-        
+

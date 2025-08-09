@@ -13,7 +13,7 @@ app.use('/personals', personalsRoutes);
 
 // Rota do home
 app.get('/', (req, res) => {
-  res.send('Welcome to the homepage!');
+  res.send('Welgcfc to the homepage!');
 });
 
 // Server rodando

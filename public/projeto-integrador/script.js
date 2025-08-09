@@ -91,6 +91,7 @@ function drawCards(personals) {
     cardHolder.addEventListener("click", () => {
       DrawModal(personals[i]);
     });
+    
 
     let cardDiv = document.createElement("div");
     cardDiv.className = "card-model";
@@ -108,30 +109,45 @@ function drawCards(personals) {
   function DrawModal(personal) {
     document.getElementById("modal").style.display = "block";
 
-    let index = 0
 
-    const lbName = document.getElementById('nome')
-    lbName.textContent = "Nome: "+personals[index].nome
+    document.getElementById('nome').textContent = personal.nome;
+    document.getElementById('genero').textContent = `Gênero: ${personal.genero}`;
+
+    const formacoes = personal.formacao.join(', ');
+    document.getElementById('formacao').textContent = `Formação: ${formacoes}`;
+
+    const experiencias = personal.experiencia.join(', ');
+    document.getElementById('experiencia').textContent = `Experiência: ${experiencias}`;
+
+    document.getElementById('horario').textContent = `Horários: ${personal.horario}`;
+    document.getElementById('atendimento').textContent = `Atendimento: ${personal.atendimento}`;
+
+    document.getElementById('telefone').textContent = `Telefone: ${personal.contato.telefone}`;
+    document.getElementById('email').textContent = `Email: ${personal.contato.email}`;
+    document.getElementById('instagram').textContent = `Instagram: ${personal.contato.instagram}`;
 
 
+    // const modalImg = document.getElementById('modal-image');
+    // modalImg.src = personal.image;
+    // modalImg.alt = `Foto de ${personal.nome}`;
   }
 
 
 
 
-  function switchModal (modal) {
+  function switchModal(modal) {
 
     const actualStyle = modal.style.display
 
-    if(actualStyle == 'block') {
+    if (actualStyle == 'block') {
       modal.style.display = 'none'
     }
-    else{
+    else {
       modal.style.display = 'block'
     }
   }
 
-  window.onclick = function(event) {
+  window.onclick = function (event) {
     const modal = document.getElementById('modal')
     if (event.target == modal) {
       switchModal(modal)
