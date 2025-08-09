@@ -417,3 +417,75 @@ span {
     border-radius: 30px;
     background-position: 10%;
 }
+
+
+
+#dados {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 8px;
+}
+    
+#foto {
+    background-image: url(../images/imagem1.png);
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+#nome {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 7;
+}
+
+#genero {
+    grid-column: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+
+#formacao {
+    grid-column: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 5;
+}
+
+#experiencia {
+    grid-column: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 6;
+}
+
+#horario {
+    grid-column: span 3 / span 3;
+    grid-column-start: 8;
+    grid-row-start: 4;
+}
+
+#forma {
+    grid-column: span 3 / span 3;
+    grid-column-start: 8;
+    grid-row-start: 5;
+}
+
+#contato {
+    grid-column: span 3 / span 3;
+    grid-column-start: 8;
+    grid-row-start: 6;
+}
+
+#instagram {
+    grid-column: span 3 / span 3;
+    grid-column-start: 5;
+    grid-row-start: 8;
+}
+
+#email {
+    grid-column: span 3 / span 3;
+    grid-column-start: 8;
+    grid-row-start: 8;
+}
+        

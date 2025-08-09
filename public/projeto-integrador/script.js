@@ -107,7 +107,16 @@ function drawCards(personals) {
 
   function DrawModal(personal) {
     document.getElementById("modal").style.display = "block";
+
+    let index = 0
+
+    const lbName = document.getElementById('nome')
+    lbName.textContent = "Nome: "+personals[index].nome
+
+
   }
+
+
 
 
   function switchModal (modal) {
