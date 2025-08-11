@@ -107,8 +107,14 @@ function drawCards(personals) {
   }
 
   function DrawModal(personal) {
-    document.getElementById("modal").style.display = "block";
 
+    let modal = document.getElementById("modal")
+    modal.style.display = "flex";
+    modal.style.opacity = 1
+    modal.style.transition = 'opacity 0.325s'
+
+
+    document.getElementById('foto').style.backgroundImage = `url(${personal.image})`
 
     document.getElementById('nome').textContent = personal.nome;
     document.getElementById('genero').textContent = `Gênero: ${personal.genero}`;
@@ -127,6 +133,7 @@ function drawCards(personals) {
     document.getElementById('instagram').textContent = `Instagram: ${personal.contato.instagram}`;
 
 
+
     // const modalImg = document.getElementById('modal-image');
     // modalImg.src = personal.image;
     // modalImg.alt = `Foto de ${personal.nome}`;
@@ -139,11 +146,11 @@ function drawCards(personals) {
 
     const actualStyle = modal.style.display
 
-    if (actualStyle == 'block') {
+    if (actualStyle == 'flex') {
       modal.style.display = 'none'
     }
     else {
-      modal.style.display = 'block'
+      modal.style.display = 'flex'
     }
   }
 
