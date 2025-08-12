@@ -110,9 +110,6 @@ function drawCards(personals) {
 
     let modal = document.getElementById("modal")
     modal.style.display = "flex";
-    modal.style.opacity = 1
-    modal.style.transition = 'opacity 0.325s'
-
 
     document.getElementById('foto').style.backgroundImage = `url(${personal.image})`
 

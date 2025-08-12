@@ -330,7 +330,6 @@ span {
     font-size: 2rem;
     color: #191919;
     display: none;
-    opacity: 0;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -339,11 +338,19 @@ span {
     height: 100%;
     overflow: auto;
     border: 1px solid var(--main-color);
-    transition: opacity 0.325s;
     justify-content: center;
     align-items: center;
+    animation: fadein .3s;
 }
 
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 .modal-container {
     position: relative;
     background-color: #f2f2f2;
