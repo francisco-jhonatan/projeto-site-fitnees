@@ -129,11 +129,6 @@ function drawCards(personals) {
     document.getElementById('email').textContent = `Email: ${personal.contato.email}`;
     document.getElementById('instagram').textContent = `Instagram: ${personal.contato.instagram}`;
 
-
-
-    // const modalImg = document.getElementById('modal-image');
-    // modalImg.src = personal.image;
-    // modalImg.alt = `Foto de ${personal.nome}`;
   }
 
 
