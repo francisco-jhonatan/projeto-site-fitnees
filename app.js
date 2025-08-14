@@ -16,6 +16,25 @@ app.use('/personals', personalsRoutes);
 app.get('/', (req, res) => {
   res.send('Welgcfc to the homepage!');
 });
+mongoose.connect('mongodb+srv://Amaral86:'+encodeURIComponent('Nascimento14#')+'@amaral.534eoif.mongodb.net/?retryWrites=true&w=majority&appName=Amaral')
+.then(()=>{
+  console.log('conexão estabelecida')
+})
+const blog = new Schema({
+  title: String,
+  slug: String,
+  published: Boolean,
+  author: String,
+  content: String,
+  tags: [String],
+  createdAt: Date,
+  updatedAt: Date,
+  comments: [{
+    user: String,
+    content: String,
+    votes: Number
+  }]
+});
 
 mongoose.connect("mongodb+srv://ruaniago25:lUP9Qzr4fXewsyKY@personal.xatmdq5.mongodb.net/?retryWrites=true&w=majority&appName=personal")
 .then(()=>{
