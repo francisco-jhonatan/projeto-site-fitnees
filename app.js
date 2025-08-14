@@ -36,12 +36,30 @@ const blog = new Schema({
   }]
 });
 
-mongoose.connect("mongodb+srv://ruaniago25:lUP9Qzr4fXewsyKY@personal.xatmdq5.mongodb.net/?retryWrites=true&w=majority&appName=personal")
+mongoose.connect("mongodb+srv://franciscojhonatan0077:G6dJyPyVxfT23fQU@projetoacademia.476jyg3.mongodb.net/?retryWrites=true&w=majority&appName=ProjetoAcademia")
 .then(()=>{
   console.log("Conexão estabelecida")
+})
+
 // Server rodando
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
-})
 
+
+
+// import mongoose from 'mongoose';
+// const { Schema } = mongoose;
+
+// const blogSchema = new Schema({
+//   title: String, // String is shorthand for {type: String}
+//   author: String,
+//   body: String,
+//   comments: [{ body: String, date: Date }],
+//   date: { type: Date, default: Date.now },
+//   hidden: Boolean,
+//   meta: {
+//     votes: Number,
+//     favs: Number
+//   }
+// });
