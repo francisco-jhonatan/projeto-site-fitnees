@@ -1,4 +1,8 @@
-
+const mongoose = require('mongoose');
+mongoose.connect("mongodb+srv://antoniosousaw22:zfshPvB7wSZ1OKyC@projetoant.m9i1mrb.mongodb.net/?retryWrites=true&w=majority&appName=ProjetoAnt")
+.then(()=>{
+  console.log("conexão estabelecida")
+})
 var personals = [
   {
     'id': 0,
@@ -91,3 +95,17 @@ router.post('/', (req, res) => {
 });
 
 module.exports = router;
+const Schema = new mongoose.Schema({
+  nome: String,
+  idade: Number,
+  ativo: Boolean,
+  detalhes: Object, // Para armazenar objetos JSON
+});
+const Model = mongoose.model('Personals',Schema);
+const personals = async () => {
+  const Skema = new Exemplo({
+    nome: 'Antonio',
+    idade: 30,
+    ativo: true,
+    Especialização: "Crossfit"
+})};
