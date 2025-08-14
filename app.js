@@ -1,26 +1,32 @@
 const express = require('express');
-const personalsRoutes = require('./routes/personals'); // Importa a rota
+const personalsRoutes = require('./routes/personals');
 const mongoose = require('mongoose');
+const { Schema } = mongoose; 
+const cors = require('cors');
+
 const app = express();
 const port = 3000;
-const cors = require('cors')// acess-control-allow-origin
 
-app.use(cors())
+app.use(cors());
+app.use(express.json());
 
-app.use(express.json())
 
-// Monta a rota '/users' 
 app.use('/personals', personalsRoutes);
-
-// Rota do home
 app.get('/', (req, res) => {
-  res.send('Welgcfc to the homepage!');
+  res.send('Welcome to the homepage!');
 });
-mongoose.connect('mongodb+srv://Amaral86:'+encodeURIComponent('Nascimento14#')+'@amaral.534eoif.mongodb.net/?retryWrites=true&w=majority&appName=Amaral')
-.then(()=>{
-  console.log('conexão estabelecida')
-})
-const blog = new Schema({
+
+
+mongoose.connect('mongodb+srv://franciscojhonatan0077:G6dJyPyVxfT23fQU@projetoacademia.476jyg3.mongodb.net/?retryWrites=true&w=majority&appName=ProjetoAcademia')
+  .then(() => {
+    console.log("Conexão estabelecida");
+  })
+  .catch(err => {
+    console.error("Erro na conexão MongoDB:", err);
+  });
+
+
+const blogSchema = new Schema({
   title: String,
   slug: String,
   published: Boolean,
@@ -36,15 +42,13 @@ const blog = new Schema({
   }]
 });
 
-mongoose.connect("mongodb+srv://franciscojhonatan0077:G6dJyPyVxfT23fQU@projetoacademia.476jyg3.mongodb.net/?retryWrites=true&w=majority&appName=ProjetoAcademia")
-.then(()=>{
-  console.log("Conexão estabelecida")
-})
+const Blog = mongoose.model('Blog', blogSchema);
 
-// Server rodando
+
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
+
 
 
 
