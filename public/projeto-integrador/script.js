@@ -1,31 +1,17 @@
 
-// import { getPersonals, searchPersonalsByName} from './scripts/apiServices';
+ import {searchPersonalsByName} from './scripts/apiServices'
 
-//Buscar a primeira página de personais ao carregar a página
-// async function getPersonals12() {
-//   try {
-//     console.log('opa')
-//     console.log('Buscando a primeira página de personais...');
-//     const data = await getPersonals(0); // Busca a página 0
-//     console.log('Personais encontrados:', data.personals);
-//     console.log('Página atual:', data.currentPage);
-//     console.log('Total de páginas:', data.totalPages);
-//     console.log(data)
-//   } catch (error) {
-//     alert(error.message);
-//   }
-// }
-// getPersonals12()
+async function getPersonalByName(nomePersonal) {
+    try {
+        console.log(`Buscando por "${nomePersonal}"...`);
+        const resultados = await searchPersonalsByName(nomePersonal);
+        console.log('Resultados da busca:', resultados);
+    } catch (error) {
+        alert(error.message);
+    }
+}
 
-// (async () => {
-//     try {
-//         console.log('Buscando por "Iago"...');
-//         const resultados = await searchPersonalsByName('Iago');
-//         console.log('Resultados da busca:', resultados);
-//     } catch (error) {
-//         alert(error.message);
-//     }
-// })();
+// getPersonalByName() //chamar a função na busca por nome
 
 const cardContainer = document.getElementById("card-container");
 
