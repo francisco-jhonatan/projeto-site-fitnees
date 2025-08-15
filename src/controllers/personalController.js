@@ -45,7 +45,7 @@ exports.createPersonal = async (req, res) => {
 exports.searchPersonalByName = async (req, res) => {
   try {
     const { nome } = req.query; // Busca o parâmetro 'nome' da URL, ex: /search?nome=João
-    console.log(nome)
+    
     if (!nome) {
       return res.status(400).json({ message: 'O parâmetro de busca "nome" é obrigatório.' });
     }
