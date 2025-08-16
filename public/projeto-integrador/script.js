@@ -15,7 +15,7 @@
 
 const cardContainer = document.getElementById("card-container");
 
-let url = "http://localhost:3333/api/personals/"; // Modificar quando colocar em produção
+let url = "http://localhost:3333/api/personals?param=0"; // Modificar quando colocar em produção
 
 async function chamarApi() {
   const resp = await fetch(url);
@@ -41,11 +41,14 @@ function drawCards(personals) {
 
     let cardDiv = document.createElement("div");
     cardDiv.className = "card-model";
+
     // BEGIN GAMBIARRA
     const { foto } = personals[i]
     const fotos = foto.split('\\')
-    cardDiv.style.backgroundImage = 'url(' + fotos[0] + "/" + fotos[1] + ')';
+    personals[i].foto = fotos[0] + "/" + fotos[1]
     // END GAMBIARRA
+
+    cardDiv.style.backgroundImage = 'url(' + personals[i].foto + ')';
     let personalName = document.createElement("h1");
     personalName.textContent = personals[i].nome;
 
@@ -56,25 +59,27 @@ function drawCards(personals) {
   }
 
   function DrawModal(personal) {
-
+    console.log(personal)
     let modal = document.getElementById("modal")
     modal.style.display = "flex";
 
-    document.getElementById('foto').style.backgroundImage = `url(${personal.image})`
+    document.getElementById('foto').style.backgroundImage = `url(${personal.foto})`
 
     document.getElementById('nome').textContent = personal.nome;
     document.getElementById('genero').textContent = `Gênero: ${personal.genero}`;
 
-    const formacoes = personal.formacao.join(', ');
-    document.getElementById('formacao').textContent = `Formação: ${formacoes}`;
+    document.getElementById('formacao').textContent = `Formação: ${personal.formacao}`;
 
-    const experiencias = personal.experiencia.join(', ');
-    document.getElementById('experiencia').textContent = `Experiência: ${experiencias}`;
+    document.getElementById('experiencia').textContent = `Experiência: ${personal.experiencia}`;
 
-    document.getElementById('horario').textContent = `Horários: ${personal.horario}`;
-    document.getElementById('atendimento').textContent = `Atendimento: ${personal.atendimento}`;
 
-    document.getElementById('telefone').textContent = `Telefone: ${personal.contato.telefone}`;
+    document.getElementById('horario').textContent = `Horários: ${personal.horarioDeAtendimento}`;
+    let atendimento = personal.formaDeAtendimento.join(', ')
+  
+    document.getElementById('atendimento').textContent = `Atendimento: ${atendimento}`;
+    console.log(personal.contato.instagram)
+
+    document.getElementById('numero').textContent = `Telefone: ${personal.contato.telefone}`;
     document.getElementById('email').textContent = `Email: ${personal.contato.email}`;
     document.getElementById('instagram').textContent = `Instagram: ${personal.contato.instagram}`;
 

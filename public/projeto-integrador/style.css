@@ -297,7 +297,7 @@ span {
     color: #191919;
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 10000;
     top: 0;
     left: 0;
     width: 100%;
@@ -389,7 +389,7 @@ span {
     grid-row-start: 7;
 }
 
-#forma {
+#atendimento {
     border: 1px solid var(--main-color);;
     grid-column-start: 2;
     grid-row-start: 7;
