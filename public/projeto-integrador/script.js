@@ -1,15 +1,15 @@
 
- import {searchPersonalsByName} from './scripts/apiServices'
+//  import {searchPersonalsByName} from './scripts/apiServices'
 
-async function getPersonalByName(nomePersonal) {
-    try {
-        console.log(`Buscando por "${nomePersonal}"...`);
-        const resultados = await searchPersonalsByName(nomePersonal);
-        console.log('Resultados da busca:', resultados);
-    } catch (error) {
-        alert(error.message);
-    }
-}
+// async function getPersonalByName(nomePersonal) {
+//     try {
+//         console.log(`Buscando por "${nomePersonal}"...`);
+//         const resultados = await searchPersonalsByName(nomePersonal);
+//         console.log('Resultados da busca:', resultados);
+//     } catch (error) {
+//         alert(error.message);
+//     }
+// }
 
 // getPersonalByName() //chamar a função na busca por nome
 
@@ -22,7 +22,7 @@ async function chamarApi() {
   if (resp.status === 200) {
     const obj = await resp.json();
     console.log(obj.personals);
-    drawCards(obj)
+    drawCards(obj.personals)
   }
 }
 
@@ -37,12 +37,15 @@ function drawCards(personals) {
     cardHolder.addEventListener("click", () => {
       DrawModal(personals[i]);
     });
-    
+
 
     let cardDiv = document.createElement("div");
     cardDiv.className = "card-model";
-    cardDiv.style.backgroundImage = `url(${personals[i].image})`;
-
+    // BEGIN GAMBIARRA
+    const { foto } = personals[i]
+    const fotos = foto.split('\\')
+    cardDiv.style.backgroundImage = 'url(' + fotos[0] + "/" + fotos[1] + ')';
+    // END GAMBIARRA
     let personalName = document.createElement("h1");
     personalName.textContent = personals[i].nome;
 
