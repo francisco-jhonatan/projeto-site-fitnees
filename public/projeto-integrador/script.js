@@ -64,7 +64,7 @@ function drawCards(personals) {
     modal.style.display = "flex";
 
     document.getElementById('foto').style.backgroundImage = `url(${personal.foto})`
-
+    document.getElementById('texto').textContent = personal.descricao
     document.getElementById('nome').textContent = personal.nome;
     document.getElementById('genero').textContent = `Gênero: ${personal.genero}`;
 

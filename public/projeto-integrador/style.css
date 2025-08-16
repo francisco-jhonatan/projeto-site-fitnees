@@ -12,6 +12,7 @@
 
 :root {
     --bg-color: #232323;
+    --outline-gray: #aaa;
     --snd-bg-color: #191919;
     --text-color: #fff;
     --main-color: #00e1ff;
@@ -347,75 +348,69 @@ span {
     color: red;
 }
 
-#dados {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+#dados{
+    display: flex;
+    width: 600px;
     gap: 8px;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 #dados label{
     padding: 2mm;
     border-radius: 8px;
 }
-    
-#nome {
-    grid-column: span 2 / span 2;
-}
 
-#foto {
+#nome{
+    border-bottom: 1px solid var(--outline-gray);
+    border-radius: 0!important;
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 32px;
+}
+#foto{
     background-size: cover;
     background-position: center;
     border-radius: 100%;
-    grid-row: span 4 / span 4;
-    grid-row-start: 2;
+    width: 200px;
+    height: 200px;
 }
-
-#texto {
-    /* font-size: 3rem; */
-    grid-row: span 4 / span 4;
-    grid-row-start: 2;
+#texto{
+    padding: 2mm;
+    text-align: justify;
+    width: calc(100% - 208px);
 }
 
 #contato {
-    border: 1px solid var(--main-color);
-    grid-column: span 2 / span 2;
-    grid-row-start: 6;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid var(--outline-gray);
+    border-radius: 8px;
 }
-
 #genero{
-    border: 1px solid var(--main-color);;
-    grid-column-start: 1;
-    grid-row-start: 7;
+    border: 1px solid var(--outline-gray);
+    width: calc(50% - 4px);
 }
 
 #atendimento {
-    border: 1px solid var(--main-color);;
-    grid-column-start: 2;
-    grid-row-start: 7;
+    border: 1px solid var(--outline-gray);
+    width: calc(50% - 4px);
 }
-
-
-
 #horario {
-    border: 1px solid var(--main-color);;
-    grid-column: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 8;
+    border: 1px solid var(--outline-gray);
+    width: 100%;
 }
+
 
 #formacao {
-    border: 1px solid var(--main-color);;
-    grid-column: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 9;
+    border: 1px solid var(--outline-gray);
+    width: 100%;
 }
 
 #experiencia {
-    border: 1px solid var(--main-color);;
-    grid-column: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 10;
+    border: 1px solid var(--outline-gray);
+    width: 100%;
 }
 
 
