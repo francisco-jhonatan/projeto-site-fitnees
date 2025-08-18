@@ -1,93 +1,114 @@
-const cardContainer = document.getElementById("card-container");
+// const cardContainer = document.getElementById("card-container");
 const searchInput = document.getElementById("search");
 const btnSearch = document.getElementById("search-btn");
 const modal = document.getElementById("modal");
 
+//  import {searchPersonalsByName} from './scripts/apiServices'
 
-const baseUrl = "http://localhost:3333/api/personals?param=0";
+// async function getPersonalByName(nomePersonal) {
+//     try {
+//         console.log(`Buscando por "${nomePersonal}"...`);
+//         const resultados = await searchPersonalsByName(nomePersonal);
+//         console.log('Resultados da busca:', resultados);
+//     } catch (error) {
+//         alert(error.message);
+//     }
+// }
 
+// getPersonalByName() //chamar a função na busca por nome
 
-async function buscarPersonals(url) {
-  try {
-    const resp = await fetch(url);
-    if (!resp.ok) throw new Error(`Erro ${resp.status}`);
-    const data = await resp.json();
-    return data.personals;
-  } catch (error) {
-    console.error("Erro ao buscar personals:", error);
-    return [];
+const cardContainer = document.getElementById("card-container");
+
+let url = "http://localhost:3333/api/personals?param=0"; // Modificar quando colocar em produção
+
+async function chamarApi() {
+  const resp = await fetch(url);
+  if (resp.status === 200) {
+    const obj = await resp.json();
+    console.log(obj.personals);
+    drawCards(obj.personals)
   }
 }
 
+chamarApi()
 
 function drawCards(personals) {
-  cardContainer.innerHTML = ""; 
-  const fragment = document.createDocumentFragment();
 
-  personals.forEach(personal => {
-  
-    if (personal.foto.includes("\\")) {
-      const partes = personal.foto.split("\\");
-      personal.foto = `${partes[0]}/${partes[1]}`;
-    }
+  for (let i = 0; i < personals.length; i++) {
+    let cardFrag = document.createDocumentFragment();
+    let cardHolder = document.createElement("div");
+    cardHolder.className = "card-holder";
+    cardHolder.addEventListener("click", () => {
+      DrawModal(personals[i]);
+    });
 
-   
-    const cardDiv = document.createElement("div");
+
+    let cardDiv = document.createElement("div");
     cardDiv.className = "card-model";
-    cardDiv.style.backgroundImage = `url(${personal.foto})`;
 
-    const personalName = document.createElement("h1");
-    personalName.textContent = personal.nome;
+    // BEGIN GAMBIARRA
+    const { foto } = personals[i]
+    const fotos = foto.split('\\')
+    personals[i].foto = fotos[0] + "/" + fotos[1]
+    // END GAMBIARRA
+
+    cardDiv.style.backgroundImage = 'url(' + personals[i].foto + ')';
+    let personalName = document.createElement("h1");
+    personalName.textContent = personals[i].nome;
+
     cardDiv.appendChild(personalName);
+    cardHolder.appendChild(cardDiv);
+    cardFrag.appendChild(cardHolder);
+    cardContainer.appendChild(cardFrag);
+  }
 
+  function DrawModal(personal) {
+    console.log(personal)
+    let modal = document.getElementById("modal")
+    modal.style.display = "flex";
+
+    document.getElementById('foto').style.backgroundImage = `url(${personal.foto})`
+
+    document.getElementById('texto').textContent = personal.descricao
+    document.getElementById('nome').textContent = personal.nome;
+    document.getElementById('genero').textContent = `Gênero: ${personal.genero}`;
+
+    document.getElementById('formacao').textContent = `Formação: ${personal.formacao}`;
+
+    document.getElementById('experiencia').textContent = `Experiência: ${personal.experiencia}`;
+
+
+    document.getElementById('horario').textContent = `Horários: ${personal.horarioDeAtendimento}`;
+    let atendimento = personal.formaDeAtendimento.join(', ')
   
-    cardDiv.addEventListener("click", () => drawModal(personal));
+    document.getElementById('atendimento').textContent = `Atendimento: ${atendimento}`;
+    console.log(personal.contato.instagram)
 
-    fragment.appendChild(cardDiv);
-  });
+    document.getElementById('numero').textContent = `Telefone: ${personal.contato.telefone}`;
+    document.getElementById('email').textContent = `Email: ${personal.contato.email}`;
+    document.getElementById('instagram').textContent = `Instagram: ${personal.contato.instagram}`;
 
-  cardContainer.appendChild(fragment);
+  }
+
+
+
+
+  function switchModal(modal) {
+
+    const actualStyle = modal.style.display
+
+    if (actualStyle == 'flex') {
+      modal.style.display = 'none'
+    }
+    else {
+      modal.style.display = 'flex'
+    }
+  }
+
+  window.onclick = function (event) {
+    const modal = document.getElementById('modal')
+    if (event.target == modal) {
+      switchModal(modal)
+    }
+  }
 }
-
-
-function drawModal(personal) {
-  modal.style.display = "flex";
-
-  document.getElementById("foto").style.backgroundImage = `url(${personal.foto})`;
-  document.getElementById("texto").textContent = personal.descricao;
-  document.getElementById("nome").textContent = personal.nome;
-  document.getElementById("genero").textContent = `Gênero: ${personal.genero}`;
-
-  document.getElementById("formacao").textContent = `Formação: ${personal.formacao}`;
-
-  document.getElementById("experiencia").textContent = `Experiência: ${personal.experiencia}`;
-
-  document.getElementById("horario").textContent = `Horários: ${personal.horarioDeAtendimento}`;
-
-  document.getElementById("atendimento").textContent = `Atendimento: ${personal.formaDeAtendimento.join(", ")}`;
-
-  document.getElementById("numero").textContent = `Telefone: ${personal.contato.telefone}`;
-  document.getElementById("email").textContent = `Email: ${personal.contato.email}`;
-  document.getElementById("instagram").textContent = `Instagram: ${personal.contato.instagram}`;
-}
-
-
-window.addEventListener("click", event => {
-  if (event.target === modal) modal.style.display = "none";
-});
-
-
-(async () => {
-  const personals = await buscarPersonals(baseUrl);
-  drawCards(personals);
-})();
-
-
-btnSearch.addEventListener("click", async () => {
-  const nome = searchInput.value.trim();
-  if (!nome) return;
-
-  const urlBusca = `http://localhost:3333/api/personals?param=${encodeURIComponent(nome)}`;
-  const personals = await buscarPersonals(urlBusca);
-  drawCards(personals);
-});
