@@ -1,6 +1,6 @@
 // const cardContainer = document.getElementById("card-container");
-const searchInput = document.getElementById("search");
-const btnSearch = document.getElementById("search-btn");
+// const searchInput = document.getElementById("search");
+// const btnSearch = document.getElementById("search-btn");
 const modal = document.getElementById("modal");
 
 //  import {searchPersonalsByName} from './scripts/apiServices'
@@ -30,7 +30,25 @@ async function chamarApi() {
   }
 }
 
+
 chamarApi()
+
+let urlBuscaPorNome = "http://localhost:3333/api/personals/search?nome=";
+
+const search = document.getElementById('search')
+const btnSearch = document.getElementById("search-btn");
+btnSearch.addEventListener('click', ()=>{
+  urlBuscaPorNome+=search.value
+  chamarApiNome()
+})
+
+async function chamarApiNome() {
+  const resp = await fetch(urlBuscaPorNome);
+  if (resp.status === 200) {
+    const obj = await resp.json();
+    drawCards(obj)
+  }
+}
 
 function drawCards(personals) {
 

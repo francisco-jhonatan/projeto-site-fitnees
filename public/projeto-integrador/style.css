@@ -122,14 +122,14 @@ span {
 }
 
 
-#pesquisa{
+#pesquisa {
     display: flex;
     /* position:relative; */
     /* justify-content: right;
     align-items:end ; */
 }
 
-#pesquisa input{
+#pesquisa input {
     font-size: 24px;
 }
 
@@ -235,23 +235,23 @@ span {
 
 .cabecalho {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     text-align: center;
     font-size: 4.5rem;
     padding: 0 3rem;
     width: 100%;
-   
+
 }
 
 .cabecalho h2 {
     text-align: left;
     line-height: 1.2;
     display: flex;
-    justify-content:flex-end;
-    
+    justify-content: flex-end;
+
 }
 
-.sobre-content{
+.sobre-content {
     display: flex;
 }
 
@@ -260,12 +260,12 @@ span {
     width: auto;
     /* background: #fa0808; */
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
 }
 
-.img{
+.img {
     margin: 8mm;
-   
+
 }
 
 .sobre {
@@ -280,8 +280,8 @@ span {
     margin: 2rem 0 2rem;
     font-family: 'Times New Roman';
     display: flex;
-    justify-content:center;
-    
+    justify-content: center;
+
 }
 
 .footer img:hover {
@@ -315,13 +315,15 @@ span {
 }
 
 @keyframes fadein {
-    from{
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
+
 .modal-container {
     position: relative;
     top: 50px;
@@ -337,7 +339,7 @@ span {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
- .btn-close-1 {
+.btn-close-1 {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -352,7 +354,7 @@ span {
     color: red;
 }
 
-#dados{
+#dados {
     display: flex;
     width: 600px;
     gap: 8px;
@@ -360,27 +362,29 @@ span {
     flex-direction: row;
 }
 
-#dados label{
+#dados label {
     padding: 2mm;
     border-radius: 8px;
 }
 
-#nome{
+#nome {
     border-bottom: 1px solid var(--outline-gray);
-    border-radius: 0!important;
+    border-radius: 0 !important;
     text-align: center;
     width: 100%;
     font-weight: 700;
     font-size: 32px;
 }
-#foto{
+
+#foto {
     background-size: cover;
     background-position: center;
     border-radius: 100%;
     width: 200px;
     height: 200px;
 }
-#texto{
+
+#texto {
     padding: 2mm;
     text-align: justify;
     width: calc(100% - 208px);
@@ -392,7 +396,8 @@ span {
     border: 1px solid var(--outline-gray);
     border-radius: 8px;
 }
-#genero{
+
+#genero {
     border: 1px solid var(--outline-gray);
     width: calc(50% - 4px);
 }
@@ -401,6 +406,7 @@ span {
     border: 1px solid var(--outline-gray);
     width: calc(50% - 4px);
 }
+
 #horario {
     border: 1px solid var(--outline-gray);
     width: 100%;
@@ -418,4 +424,16 @@ span {
 }
 
 
+/* Barra de pesquisa */
+#search {
+    border-radius: 5px;
+    position: relative;
+    top: 26rem;
+    right: 48rem;
+}
 
+#search-btn{
+    position: relative;
+    top: 26rem;
+    right: 48rem;
+}
