@@ -25,7 +25,7 @@ async function chamarApi() {
   const resp = await fetch(url);
   if (resp.status === 200) {
     const obj = await resp.json();
-    console.log(obj.personals);
+    cardContainer.innerHTML = "";
     drawCards(obj.personals)
   }
 }
@@ -37,28 +37,58 @@ let urlBuscaPorNome = "http://localhost:3333/api/personals/search?nome=";
 
 const search = document.getElementById('search')
 const btnSearch = document.getElementById("search-btn");
-btnSearch.addEventListener('click', ()=>{
-  urlBuscaPorNome+=search.value
- 
-  chamarApiNome()
-  
+btnSearch.addEventListener('click', () => {
+  const nome = search.value.trim();
+  if (nome !== "") {
+    urlBuscaPorNome = "http://localhost:3333/api/personals/search?nome=" + nome;
+
+    chamarApiNome()
+  }
 })
 
-async function limpar(){
-  console.log("limpar")
-   urlBuscaPorNome="http://localhost:3333/api/personals/search?nome=";
-}
 
 async function chamarApiNome() {
-   const resp = await fetch(urlBuscaPorNome);
-
+  const resp = await fetch(urlBuscaPorNome);
+  const mensagemErro = document.getElementById("mensagem-erro");
   if (resp.status === 200) {
     const obj = await resp.json();
-    drawCards(obj)
 
+    if (!obj || obj.length === 0) {
+      cardContainer.innerHTML = "";
+      mensagemErro.style.display = "block";
+      cardContainer.style.display = "none";
+    } else {
+      mensagemErro.style.display = "none";
+      cardContainer.style.display = "flex";
+      cardContainer.innerHTML = "";
+      drawCards(obj);
+    }
+
+  } else {
+    mensagemErro.textContent = "Erro ao buscar personal";
+    mensagemErro.style.display = "block";
+    cardContainer.innerHTML = "";
+    cardContainer.style.display = "none";
   }
-  limpar()
 }
+
+search.addEventListener('input', () => {
+  const mensagemErro = document.getElementById("mensagem-erro");
+  if (search.value.trim() === "") {
+    mensagemErro.style.display = "none"
+    cardContainer.style.display = "flex";
+    cardContainer.innerHTML = "";
+    chamarApi();
+  }
+});
+
+search.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    btnSearch.click();
+  }
+});
+
+
 
 function drawCards(personals) {
 
@@ -108,7 +138,7 @@ function drawCards(personals) {
 
     document.getElementById('horario').textContent = `Horários: ${personal.horarioDeAtendimento}`;
     let atendimento = personal.formaDeAtendimento.join(', ')
-  
+
     document.getElementById('atendimento').textContent = `Atendimento: ${atendimento}`;
     console.log(personal.contato.instagram)
 
