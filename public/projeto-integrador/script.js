@@ -39,15 +39,25 @@ const search = document.getElementById('search')
 const btnSearch = document.getElementById("search-btn");
 btnSearch.addEventListener('click', ()=>{
   urlBuscaPorNome+=search.value
+ 
   chamarApiNome()
+  
 })
 
+async function limpar(){
+  console.log("limpar")
+   urlBuscaPorNome="http://localhost:3333/api/personals/search?nome=";
+}
+
 async function chamarApiNome() {
-  const resp = await fetch(urlBuscaPorNome);
+   const resp = await fetch(urlBuscaPorNome);
+
   if (resp.status === 200) {
     const obj = await resp.json();
     drawCards(obj)
+
   }
+  limpar()
 }
 
 function drawCards(personals) {
