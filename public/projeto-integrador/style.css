@@ -96,7 +96,6 @@ span {
 
 
 /*Código da seção inicial*/
-<<<<<<< Updated upstream
 
 
 #home {
@@ -105,9 +104,6 @@ span {
 
 
 .home-content{
-=======
-.home {
->>>>>>> Stashed changes
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,8 +134,7 @@ span {
     width: 32vw;
     position: static;
     top: 100px;
-} 
-
+}
 
 
 #pesquisa {
@@ -147,8 +142,7 @@ span {
     /* position:relative; */
     /* justify-content: right;
     align-items:end ; */
-} 
-
+}
 
 #pesquisa input {
     font-size: 24px;
@@ -486,5 +480,5 @@ align-items: center;
     max-width: 50dhv;
     max-height: 50dhv;
     align-items: center;
-    font-size: 2rem;
+    flex-direction: column;
 }
