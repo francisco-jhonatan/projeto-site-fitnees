@@ -65,7 +65,7 @@ async function chamarApiNome() {
     }
 
   } else {
-    mensagemErro.textContent = "Erro ao buscar personal";
+    mensagemErro.textContent = "Personal não encontrado."
     mensagemErro.style.display = "block";
     cardContainer.innerHTML = "";
     cardContainer.style.display = "none";
