@@ -264,7 +264,12 @@ span {
 }
 
 .img {
-    margin: 8mm;
+max-width: 100%;
+height: auto;
+align-items: center;
+border-radius: 60%;
+
+    
 
 }
 
@@ -276,11 +281,11 @@ span {
 }
 
 .sobre p {
-    font-size: 2.6rem;
-    margin: 2rem 0 2rem;
-    font-family: 'Times New Roman';
-    display: flex;
-    justify-content: center;
+display: flex;
+margin-left: 20px;
+font-size: 24px;
+align-items: center;
+
 
 }
 
@@ -460,4 +465,12 @@ span {
     top: 26rem;
     right: 48rem;
 
+}
+
+.img-sobre{
+    display: flex;
+    max-width: 50dhv;
+    max-height: 50dhv;
+    align-items: center;
+    flex-direction: column;
 }
