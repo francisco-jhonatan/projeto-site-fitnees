@@ -19,7 +19,7 @@ const modal = document.getElementById("modal");
 
 const cardContainer = document.getElementById("card-container");
 
-let url = "http://localhost:3333/api/personals?param=0"; // Modificar quando colocar em produção
+let url = "http://localhost:3000/api/personals?param=0"; // Modificar quando colocar em produção
 
 async function chamarApi() {
   const resp = await fetch(url);
@@ -33,14 +33,14 @@ async function chamarApi() {
 
 chamarApi()
 
-let urlBuscaPorNome = "http://localhost:3333/api/personals/search?nome=";
+let urlBuscaPorNome = "http://localhost:3000/api/personals/search?nome=";
 
 const search = document.getElementById('search')
 const btnSearch = document.getElementById("search-btn");
 btnSearch.addEventListener('click', () => {
   const nome = search.value.trim();
   if (nome !== "") {
-    urlBuscaPorNome = "http://localhost:3333/api/personals/search?nome=" + nome;
+    urlBuscaPorNome = "http://localhost:3000/api/personals/search?nome=" + nome;
 
     chamarApiNome()
   }
