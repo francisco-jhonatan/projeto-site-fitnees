@@ -96,12 +96,31 @@ span {
 
 
 /*Código da seção inicial*/
+<<<<<<< Updated upstream
 
+
+#home {
+    flex-direction: column;
+}
+
+
+.home-content{
+=======
 .home {
+>>>>>>> Stashed changes
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.bottom{
+    flex-direction: row;
+}
+
+.lado-a-lado{
+    margin: 7rem;
+}
+
 
 .home-content h3 {
     font-size: 5rem;
@@ -119,7 +138,8 @@ span {
     width: 32vw;
     position: static;
     top: 100px;
-}
+} 
+
 
 
 #pesquisa {
@@ -127,13 +147,14 @@ span {
     /* position:relative; */
     /* justify-content: right;
     align-items:end ; */
-}
+} 
+
 
 #pesquisa input {
     font-size: 24px;
 }
 
-.home-img::before {
+.lado-a-lado::before {
     content: 'FITNESS';
     position: absolute;
     top: 10%;
@@ -445,9 +466,6 @@ align-items: center;
 }
 
 #search {
-    position: relative;
-    top: 26rem;
-    right: 48rem;
     color: white;
 }
 
@@ -461,10 +479,6 @@ align-items: center;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
-    top: 26rem;
-    right: 48rem;
-
 }
 
 .img-sobre{
@@ -472,5 +486,5 @@ align-items: center;
     max-width: 50dhv;
     max-height: 50dhv;
     align-items: center;
-    flex-direction: column;
+    font-size: 2rem;
 }
