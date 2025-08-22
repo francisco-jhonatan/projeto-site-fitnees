@@ -97,11 +97,26 @@ span {
 
 /*Código da seção inicial*/
 
-.home {
+
+#home {
+    flex-direction: column;
+}
+
+
+.home-content{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.bottom{
+    flex-direction: row;
+}
+
+.lado-a-lado{
+    margin: 7rem;
+}
+
 
 .home-content h3 {
     font-size: 5rem;
@@ -133,7 +148,7 @@ span {
     font-size: 24px;
 }
 
-.home-img::before {
+.lado-a-lado::before {
     content: 'FITNESS';
     position: absolute;
     top: 10%;
@@ -556,9 +571,6 @@ footer{
 }
 
 #search {
-    position: relative;
-    top: 26rem;
-    right: 48rem;
     color: white;
 }
 
@@ -572,10 +584,6 @@ footer{
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    position: relative;
-    top: 26rem;
-    right: 48rem;
-
 }
 
 .img-sobre{
