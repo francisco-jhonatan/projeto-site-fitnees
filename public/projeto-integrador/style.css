@@ -130,6 +130,10 @@ span {
     line-height: 1.3;
 }
 
+.home-content h4 {
+    font-size: 1.7rem;
+}
+
 /*imagem da logo home*/
 .home-img img {
     width: 32vw;
@@ -206,6 +210,7 @@ span {
 /* #region CARD */
 #card-container {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -676,6 +681,11 @@ footer {
         width: 100%;
         height: auto;
     }
+
+    .modal-container {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -709,7 +719,7 @@ footer {
     }
 
     .img-sobre img {
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
     }
 }
@@ -732,7 +742,7 @@ footer {
 
     .img-sobre img {
         width: 100%;
-        height: auto;
         border-radius: 12px;
     }
 }
+
