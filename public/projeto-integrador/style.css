@@ -348,6 +348,7 @@ footer {
 .row-footer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-col {
@@ -436,23 +437,23 @@ footer {
     outline: none;
     border: none;
     cursor: pointer;
-    color: #3db0fc;
+    color: #000000;
     border-radius: 3px;
     font-weight: bold;
     background-color: white;
 }
 
 /* Responsivo */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:700px) {
     .footer-col {
-        width: 100%;
+        width: 200%;
     }
 }
 
