@@ -65,7 +65,7 @@ async function chamarApiNome() {
     }
 
   } else {
-    mensagemErro.textContent = "Personal não encontrado."
+    mensagemErro.textContent ="Personal não encontrado."
     mensagemErro.style.display = "block";
     cardContainer.innerHTML = "";
     cardContainer.style.display = "none";
@@ -142,9 +142,9 @@ function drawCards(personals) {
     document.getElementById('atendimento').textContent = `Atendimento: ${atendimento}`;
     console.log(personal.contato.instagram)
 
-    document.getElementById('numero').textContent = `Telefone: ${personal.contato.telefone}`;
-    document.getElementById('email').textContent = `Email: ${personal.contato.email}`;
-    document.getElementById('instagram').textContent = `Instagram: ${personal.contato.instagram}`;
+    document.getElementById('numero').innerHTML == ` ${personal.contato.telefone}`;
+    document.getElementById('email').textContent= `Email:  ${personal.contato.email}`;
+    document.getElementById('instagram').innerHTML == ` ${personal.contato.instagram}`;
 
   }
 
