@@ -167,6 +167,13 @@ span {
     z-index: -1;
 }
 
+@media only screen and (max-width: 768px) {
+  .lado-a-lado::before {
+    display: none;
+  }
+}
+
+
 .home-content p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
@@ -633,6 +640,8 @@ footer {
     line-height: 2.3;
 }
 
+
+
 /*RESPONSIVIDADE*/
 
 @media only screen and (max-width: 600px) {
@@ -721,6 +730,11 @@ footer {
         max-width: 100%;
         height: auto;
     }
+
+    .modal-container {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -742,6 +756,11 @@ footer {
     .img-sobre img {
         width: 100%;
         border-radius: 12px;
+    }
+
+    .modal-container {
+        max-width: 100%;
+        height: auto;
     }
 }
 
