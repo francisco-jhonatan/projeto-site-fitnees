@@ -69,9 +69,49 @@ header {
     transform: scale(1.1);
 }
 
-span {
+span.multiple-text {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+    margin: 40px 0 60px 0;
     color: var(--main-color);
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00d4d4;
+    width: 0;
+    opacity: 0;
+    animation: 
+        fadeSlide 0.8s ease forwards,
+        typing 3s steps(30, end) 0.8s forwards,
+        blink 0.7s step-end infinite 3.8s;
+    
 }
+
+@keyframes fadeSlide{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+
+
 
 .navbar {
     display: flex;
