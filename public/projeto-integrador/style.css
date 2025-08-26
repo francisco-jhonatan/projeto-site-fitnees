@@ -131,7 +131,8 @@ span {
 }
 
 .home-content h4 {
-    font-size: 1.7rem;
+    font-size: 2rem;
+    margin: 5mm;
 }
 
 /*imagem da logo home*/
@@ -168,9 +169,9 @@ span {
 }
 
 @media only screen and (max-width: 768px) {
-  .lado-a-lado::before {
-    display: none;
-  }
+    .lado-a-lado::before {
+        display: none;
+    }
 }
 
 
@@ -459,7 +460,7 @@ footer {
 
 #modal {
     font-size: 2rem;
-    color: #191919;
+    color: #ffffff;
     display: none;
     position: fixed;
     z-index: 10000;
@@ -487,7 +488,7 @@ footer {
 .modal-container {
     position: relative;
     top: 50px;
-    background-color: #f2f2f2;
+    background-color: #000000;
     padding: 30px 40px;
     border-radius: 10px;
     border: 2px solid var(--main-color);
@@ -505,7 +506,7 @@ footer {
     right: 15px;
     font-size: 28px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -555,16 +556,17 @@ footer {
     justify-content: space-evenly;
     border: 1px solid var(--outline-gray);
     border-radius: 8px;
+    width: calc(40% - 4px);
 }
 
 #genero {
     border: 1px solid var(--outline-gray);
-    width: calc(50% - 4px);
+    width: calc(60% - 4px);
 }
 
 #atendimento {
     border: 1px solid var(--outline-gray);
-    width: calc(50% - 4px);
+    width: 100%;
 }
 
 #horario {
@@ -680,6 +682,13 @@ footer {
         text-align: center;
     }
 
+    #texto {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+    }
+
     .texto-sobre {
         font-size: 2rem;
         line-height: 1.5;
@@ -692,8 +701,22 @@ footer {
     }
 
     .modal-container {
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
+    }
+
+    /* .card-holder{
+        padding: 0px;
+        align-content: center;
+    } */
+
+    #contato{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-model{
+        margin: 10px;
     }
 }
 
@@ -764,4 +787,3 @@ footer {
         height: auto;
     }
 }
-
