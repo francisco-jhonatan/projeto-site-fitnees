@@ -3,6 +3,7 @@ const router = express.Router();
 const personalController = require('../controllers/personalController');
 const upload = require('../middleware/upload');
 
+//http://localhost:3333/api/personals?param=0
 // Rota POST para criar um novo personal.
 // O 'upload.single('foto')' é o middleware que processa o upload do arquivo com o campo 'foto'.
 router.post('/', upload.single('foto'), personalController.createPersonal);

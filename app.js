@@ -16,7 +16,10 @@ app.use(express.urlencoded({ extended: true })); // Para parsear dados de formul
 
 // Middleware para servir arquivos estáticos (as fotos)
 // Agora, a URL da foto (ex: http://localhost:3333/uploads/foto-1678886400000.png) será acessível publicamente
+app.use('/',express.static(path.join(__dirname, 'public', 'projeto-integrador')));
+app.use('/images',express.static(path.join(__dirname, 'public', 'images')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 connectDB();
 

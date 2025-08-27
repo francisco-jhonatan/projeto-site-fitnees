@@ -1,3 +1,4 @@
+const path = require('path');
 const Personal = require('../models/Personal');
 
 // 1. Criar um novo Personal Trainer
@@ -86,3 +87,8 @@ exports.getPaginatedPersonals = async (req, res) => {
     res.status(500).json({ message: 'Erro ao listar personal trainers.', error: error.message });
   }
 };
+
+exports.startIndex = async (req, res)=>{
+  console.log('oi');
+  return res.sendFile(path.join(__dirname,"projeto-integrador","index.html"))
+}
