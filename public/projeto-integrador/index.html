@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>Pulse Treinamentos</title>
 </head>
 
 <body>
-    <div class=".container text-center">
+    <div class="text-center">
+
         <!--Código da seção do cabeçalho-->
 
         <header>
-            
-            
+
+
             <a href="#home" class="logo">Pulse <span>Treinamentos</span></a>
 
 
@@ -24,31 +28,40 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#servicos">Profissionais</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#danger"></a></li>
+
             </ul>
 
-            <!-- <div class="top-btn">
-                <a href="#" class="nav-btn">Conectar</a>
-            </div> -->
+
         </header>
 
         <!--Código da seção inicial-->
 
-        <section class="home" id="home">
-            <div class="home-content">
+        <section class="home-content">
+            <div id="home" class="home-content">
 
-                
-                <h1>O treino certo muda tudo.Seu melhor está por vir.</h1>
-                <h3><span class="multiple-text">Musculação</span></h3>
+                <div class="bottom home-content">
+                    <div class="lado-a-lado">
+                        <h1>O Treino certo muda tudo <br>Seu melhor está por vir.</h1>
+                        <h3><span class="multiple-text">Inovação, Conexão e Resultados.</span></h3>
+                        <h4>Encontre os melhores personal trainers de Piripiri-PI. <br>
+                            Escolha quem vai guiar você rumo ao seu melhor.</h4>
 
-                
+                    </div>
 
+                    <div class="lado-a-lado">
+                        <img src="../images/imagem.logo.fitness.png" alt="Home Image">
+                    </div>
 
+                </div>
+
+                <div id="pesquisa">
+                    <input id="search" type="text" placeholder="Pesquise Seu Personal ">
+                    <button id="search-btn"> Pesquisar</button>
+                </div>
 
             </div>
 
-            <div class="home-img">
-                <img src="../images/inicio.png" alt="Home Image">
-            </div>
 
         </section>
 
@@ -58,224 +71,130 @@
         <section class="servicos" id="servicos">
             <h2 class="cabecalho">Nossos <span>Profissionais</span></h2>
 
-            <div id="card-container" class="row grid text-center cards-conteudo-de-servicos">
-
-                  <!--  <div class="col-sm-6 card cards" style="width: 32rem;">
-                    <div class="card-body">
-                        <img class="card-img-top " src="../images/imagem.1.jpg" alt="">
-
-                        <h2 class="card-title fs-1">Zidane</h2>
-
-                        <p class="card-text fs-3">Breve descrição do profissional</p>
-
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseWidthExample2" aria-expanded="false"
-                            aria-controls="collapseWidthExample2">
-                            Saiba Mais
-                        </button>
-                        </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample2">
-                                <div class="card card-body" style="width: 50mm;">
-                                    Infirmações do personal trainer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                Jhonatan
-                <div class="col-sm-6 card cards" style="width: 32rem;">
-                    <div class="card-body">
-                        <img class="card-img-top " src="../images/imagem.2.jpg" alt="">
-
-                        <h2 class="card-title fs-1">Jhonatan</h2>
-
-                        <p class="card-text fs-3">Breve descrição do profissional</p>
-
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseWidthExample3" aria-expanded="false"
-                            aria-controls="collapseWidthExample3">
-                            Saiba Mais
-                        </button>
-                        </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample3">
-                                <div class="card card-body" style="width: 50mm;">
-                                    Infirmações do personal trainer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                Xiquita
-                <div class="col-sm-6 card cards" style="width: 32rem;">
-                    <div class="card-body">
-                        <img class="card-img-top " src="../images/imagem.3.jpg" alt="">
-
-                        <h2 class="card-title fs-1">Xiquita</h2>
-
-                        <p class="card-text fs-3">Breve descrição do profissional</p>
-
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseWidthExample4" aria-expanded="false"
-                            aria-controls="collapseWidthExample4">
-                            Saiba Mais
-                        </button>
-                        </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample4">
-                                <div class="card card-body" style="width: 50mm;">
-                                    Infirmações do personal trainer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h1 id="mensagem-erro" style="display: none; color: red; text-align: center;">Personal não encontrado</h1>
 
 
-                Fulana
-                <div class="col-sm-6 card cards" style="width: 32rem;">
-                    <div class="card-body">
-                        <img class="card-img-top " src="../images/imagem.4.jpg" alt="">
-
-                        <h2 class="card-title fs-1">Fulana</h2>
-
-                        <p class="card-text fs-3">Breve descrição do profissional</p>
-
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseWidthExample5" aria-expanded="false"
-                            aria-controls="collapseWidthExample5">
-                            Saiba Mais
-                        </button>
-                        </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample5">
-                                <div class="card card-body" style="width: 50mm;">
-                                    Infirmações do personal trainer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="card-container" class="cards-conteudo-de-servicos"></div>
 
 
-                Renato 
-                <div class="col-sm-6 card cards" style="width: 32rem;">
-                    <div class="card-body">
-                        <img class="card-img-top " src="../images/imagem.5.jpg" alt="">
-
-                        <h2 class="card-title fs-1">Renato</h2>
-
-                        <p class="card-text fs-3">Breve descrição do profissional</p>
-
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseWidthExample6" aria-expanded="false"
-                            aria-controls="collapseWidthExample6">
-                            Saiba Mais
-                        </button>
-                        </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample6">
-                                <div class="card card-body" style="width: 50mm;">
-                                    Infirmações do personal trainer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                Mariazinha
-                <div class="col-sm-6 card cards" style="width: 32rem;">
-                    <div class="card-body">
-                        <img class="card-img-top " src="../images/imagem.7.jpg" alt="">
-
-                        <h2 class="card-title fs-1">Antônio</h2>
-
-                        <p class="card-text fs-3">Breve descrição do profissional</p>
-
-                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseWidthExample7" aria-expanded="false"
-                            aria-controls="collapseWidthExample7">
-                            Saiba Mais
-                        </button>
-                        </p>
-                        <div style="min-height: 120px;">
-                            <div class="collapse collapse-horizontal" id="collapseWidthExample7">
-                                <div class="card card-body" style="width: 50mm;">
-                                    Infirmações do personal trainer
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-            </div>  -->
         </section>
 
         <!-- código de seção sobre nós -->
 
         <section class="sobre" id="sobre">
-            <h2 class="cabecalho">Confira os nossos formatos de <span>Assinaturas</span></h2>
-            <div class="texto">
-            <div class="card-holder4"><h1>Grátis</h1></div>
-            <div class="card-holder4"><h2>R$ 10,90</h2></div>
-            <div class="card-holder4"><h3>R$ 39,90</h3></div>
-            </div>
-       
-
-        </section>
-        
-        <section class="sobre" id="sobre"><img src="../images/Gemini_Generated_Image_js03zsjs03zsjs03.png " width="500" alt="">
             <h2 class="cabecalho">Sobre <span>Nós</span></h2>
-            <div class="texto">
-               
 
+
+            <div class="sobre-content">
+                <div class="img-sobre">
+                    <div class="img2">
+                        <img src="../images/sobre nos.jpg " width="700" alt="" height="500">
+                    </div>
+                </div>
+
+                <div class="texto-sobre">
+                    <p>
+                        Nosso objetivo é conectar você aos melhores personal trainers, de forma simples, prática e
+                        confiável.
+                        Criamos este espaço para reunir informações detalhadas e contatos atualizados de
+                        profissionais
+                        qualificados,
+                        prontos para ajudar você a alcançar seus objetivos de saúde e bem-estar.
+                        Aqui, você encontra o personal ideal para seu estilo de vida, com liberdade para
+                        comparar
+                        perfis,
+                        especialidades e localizações.
+                        Mais do que um site, somos um elo entre você e uma vida mais saudável.
+                    </p>
+
+
+                </div>
 
             </div>
-       
 
         </section>
 
 
     </div>
     <!-- The Modal -->
-<div id="modal">
-    <div class="modal-container">
-      <span onclick="document.getElementById('modal').style.display='none'"
-      class="btn-close-1">&times;</span>
-      <p>nome: Iago,
-        genero: 'Masculino,..</p>
-      <p>genero: 'Masculino,....</p>
+    <div id="modal">
+        <div class="modal-container">
 
-      <div class="imagem-lado">
-        <img src="../images/imagem1.png" alt="">
+            <span onclick="document.getElementById('modal').style.display='none'"
+                class="btn-close-1 modalBtn">&times;</span>
+
+
+            <div id="dados">
+                <label id="nome">Nome: </label>
+                <img src="" alt="" id="foto">
+                <label id="texto"></label>
+
+                <div id="contato">
+                    <label id="numero"> </label>
+                    <label id="email"> </label>
+                    <label id="instagram"> </label>
+                </div>
+                <label id="genero">Gênero: </label>
+                <label id="atendimento">Forma de Atendimento: </label>
+                <label id="horario"> Horário de Atendimento: </label>
+                <label id="formacao">Formação: </label>
+                <label id="experiencia">Experiência: </label>
+
+
+
+            </div>
+
+
+
+        </div>
     </div>
-    
-    </div>
 
-    
-</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Footer Responsivo</title>
 
-    <footer class="footer">
-        <p>&copy;
-        <h2> 2025 - Todos os direitos reservados.</p>
-            Contato - (86)9964-5342 </p>
-            <p>Desenvolvido por <a href="https://seusite.com">www.Bingsites.com.br</a></p>
-            <a href="https://www.instagram.com/"> <img src="../images/instagram (1).png" alt="" width="30" > </a>
-            <a href="https://pt-br.facebook.com/login.php"> <img src="../images/facebook.png" alt="" width="34" > </a>
-    </footer>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+
+
+        <footer>
+           <div id="footerlogo"> <a><h3>Pulse<span>Treinamentos</span></h3></a></div>
+            <div class="container-footer">
+                <div class="row-footer">
+                    <!-- footer col-->
+                    <div class="footer-col">
+                        <h4>Desenvolvedores</h4>
+                        <ul>
+                            <li><a href="#">Antonio</a></li>
+                            <li><a href="#">Iago</a></li>
+                            <li><a href="#">Zidane</a></li>
+                            <li><a href="#">Jhonatan</a></li>
+                        </ul>
+                    </div>
+                    <!--end footer col-->
+                    <!-- footer col-->
+                    <div class="footer-col">
+                        <h4>Acompanhe nossas Novidades!</h4>
+                        <div class="form-sub">
+                            <form>
+                                <input type="email" placeholder="Digite o seu e-mail" required>
+                                <button>Confirmar</button>
+                            </form>
+                        </div>
+
+                        <div class="medias-socias">
+                            <a href="https://www.instagram.com/"> <i class="fa fa-instagram"></i> </a>
+                            <a href="#"> <i class="fa fa-facebook"></i> </a>
+                        </div>
+
+                        <script type="module" src="script.js"></script>
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+                            crossorigin="anonymous"></script>
+
 </body>
 
 </html>

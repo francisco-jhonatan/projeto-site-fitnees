@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Personal</title>
+</head>
+
+<body>
+  <h1>Cadastrar Novo Personal Trainer</h1>
+  <form id="personal-form">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="foto">Foto:</label><br>
+    <input type="file" id="foto" name="foto" required><br><br>
+
+    <label for="descricao">Descrição:</label><br>
+    <textarea id="descricao" name="descricao" required>Focado em treinamento funcional e bem-estar. Acredito que o movimento é a chave para uma vida saudável e equilibrada. Vamos juntos alcançar seus objetivos!</textarea><br><br>
+
+    <!-- Adicionar labels -->
+    <input name="genero" value="Masculino"><br><br>
+    <input name="formacao" value="Educação Física - UFPI"><br><br>
+    <input name="experiencia" value="8 anos"><br><br>
+    <input name="formaDeAtendimento" value="Online,Presencial"><br><br>
+    <input name="horarioDeAtendimento" value="Seg a Sex - 08h às 18h"><br><br>
+    <input name="contato" value='{"email": "teste@teste.com", "telefone": "2199999999"}'><br><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script type="module" src="../scripts/apiConsumer.js"></script>
+</body>
+
+</html>
