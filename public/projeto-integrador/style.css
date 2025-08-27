@@ -786,4 +786,8 @@ footer {
         max-width: 100%;
         height: auto;
     }
+#footerlogo{
+    display: flex;
+    margin: 40px;
+}
 }
